@@ -11,6 +11,16 @@
     <link rel="shortcut icon" href="./assets/images/aaaaaa.png" >
     <link rel="stylesheet" href="./assets/css/line-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/index.js"></script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("ywOO4vLN398L68unV");
+   })();
+</script>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar">
@@ -19,7 +29,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container flex-lg-column">
             <a class="navbar-brand mx-lg-auto mb-lg-4" href="#">
-                <img src="./assets/images/adilpass.jpg" class="d-none d-lg-block rounded-circle" alt="">
+                <img src="./assets/images/adilrusfeed.jpg" class="d-none d-lg-block rounded-circle" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,7 +75,7 @@
                              I've embarked on a journey to turn ideas into functional and elegant realities.</p>
                         <div data-aos="fade-up" data-aos-delay="600">
                             <a href="#work" class="btn btn-brand me-3">Explore My Work</a>
-                            <a href="#contact" class="link-custom">Contact Me</a>
+                            <a target="_blank" href="./assets/ADIL RUSFEED (1).pdf" class="link-custom">Download CV</a>
                         </div>
                     </div>
                 </div>
@@ -288,19 +298,19 @@
                     <div class="col-lg-8" data-aos="fade-up" data-aos-delay="300">
                         <form action="#" class="row g-lg-3 gy-3">
                             <div class="form-group col-md-6">
-                                <input type="text" class="form-control" placeholder="Enter your name">
+                                <input type="text" class="form-control" placeholder="Enter your name" id="name" required>
                             </div>
                             <div class="form-group col-md-6">
-                                <input type="email" class="form-control" placeholder="Enter your email">
+                                <input type="email" class="form-control" placeholder="Enter your email" id="email" required>
                             </div>
                             <div class="form-group col-12">
-                                <input type="text" class="form-control" placeholder="Enter subject">
+                                <input type="text" class="form-control" placeholder="Enter subject" id="subject" required>
                             </div>
                             <div class="form-group col-12">
-                                <textarea name="" rows="4" class="form-control" placeholder="Enter your message"></textarea>
+                                <textarea name="" rows="4" class="form-control" placeholder="Enter your message" id="message" ></textarea>
                             </div>
                             <div class="form-group col-12 d-grid">
-                                <button type="submit" class="btn btn-brand">Contact me</button>
+                                <button type="submit" class="btn btn-brand" onclick="sendMail()">Contact me</button>
                             </div>
                         </form>
                     </div>
